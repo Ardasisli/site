@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Portföy Sayfası</title>
+    <style>
+        /* Genel Ayarlar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Hero Bölümü */
+.hero-section {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 4em;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.scroll-down {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+.scroll-down:hover {
+    text-decoration: underline;
+}
+
+/* İçerik Bölümü */
+.content-section {
+    padding: 100px 20px;
+    background-color: #f7f7f7;
+}
+
+.content-box {
+    margin: 40px 0;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content-box h2 {
+    margin-top: 0;
+}
+
+.content-box p {
+    margin-bottom: 0;
+}
+
+/* Scroll ile İçeriklerin Yavaşça Belirmesi */
+.content-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero-section">
+        <h1 class="hero-title">Sayfama Hoşgeldiniz</h1>
+        <p class="hero-subtitle">Bu sayfada benimle ilgili her şeyi bulabilirsiniz.</p>
+        <a href="#content" class="scroll-down">Aşağı Kaydır</a>
+    </header>
+
+    <section id="content" class="content-section">
+        <div class="content-box">
+            <h2>Hakkımda</h2>
+            <p>Ben Arda Sili, 11. sınıf meslek lisesi bilişim bölümü öğrencisiyim. Yazılımda front-end kısmını öğreniyorum, sonra back-end kısmını öğrenmek istiyorum. Full-stack developer olma yolunda kendimi geliştiriyorum.</p>
+        </div>
+        <div class="content-box">
+            <h2>Projelerim</h2>
+            <p>Bu bölümde yaptığım projeleri ve bu projelerle ilgili detayları bulabilirsiniz.</p>
+        </div>
+        <div class="content-box">
+            <h2>İletişim</h2>
+            <p>Benimle iletişime geçmek isterseniz bu bölümü kullanabilirsiniz.</p>
+        </div>
+    </section>
+</body>
+</html>
